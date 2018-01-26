@@ -1,0 +1,26 @@
+{
+    "development": {
+      "username": "root",
+      "password": "",
+      "database": "med_mate_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    },
+    "test": {
+      "username": "root",
+      "password": "",
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "pplb77f7y3n6odf3",
+      "password": "ejupoi2atc3xufo8",
+      "database": "u8pnens8aaruzd5p",
+      "host": " tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql",
+      "use_env_variable": "mysql://pplb77f7y3n6odf3:ejupoi2atc3xufo8@tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/u8pnens8aaruzd5p"
+    }
+  }
+  

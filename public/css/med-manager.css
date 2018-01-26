@@ -1,0 +1,97 @@
+#jumboHead{
+    height: 5px;
+    background-image: url("/images/pills2.jpg");
+    background-size: 1924px 1263px;
+    background-position-x: 0%;
+    background-position-y: 93%;
+    margin: 0px;
+}
+
+#headMain{
+    font-family: 'Inknut Antiqua', serif;
+    color: #FFF;
+    font-size: 530%;
+    margin:auto;
+    padding: 0px;
+    margin-top: -65px;
+
+}
+
+#logoHead{
+    height: 75px;
+    width: 60px;
+    margin-bottom: 33px;
+}
+
+nav { 
+    background-color: #5DC8D9 !important;
+    position: sticky;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 3px solid #BF901D;
+}
+
+
+#todayBtn, #medListBtn, #dashBtn, #logout{
+    color: #FFF;
+}
+
+.active{
+    color: rgb(109, 109, 109) !important;
+}
+
+#mmLogo{
+    height: 38px !important;
+    width: 20%;
+}
+
+#navLogo{
+    margin-right: -190px;
+}
+
+.side-panel{
+    background-color: rgba(19, 91, 163, 0.9);
+    height:100vmax !important;
+}
+
+
+.main-content{
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-panel{
+    background-color:rgba(255, 255, 249, 0.426);
+}
+
+.card{
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    background-color:rgba(255, 255, 249, 0.426);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+button {
+    margin-right: 16px; 
+}
+
+#form-container{
+	padding: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#pageTitle{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color:rgba(0, 0, 0, 0.707);
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.validation-span{
+    color: red;
+    margin: 20px;
+}
+
+#pharmSearch{
+    margin-bottom: 0px !important;
+}

@@ -1,0 +1,55 @@
+/*Signup*/
+
+body{
+    height: 100vh;
+    background-image: url("/images/pills2.jpg");
+    background-size: 1924px 1263px;
+    background-position-x: 12%;
+    background-position-y: 88%;
+    margin: 0px;
+}
+
+#heading{
+    text-align: center;
+    font-family: 'Inknut Antiqua', serif;
+    color: #FFF;
+    font-size: 700%;
+    margin-bottom: 5%;
+    padding: 0px;
+}
+
+#logoHome{
+    height: 100px;
+    width: 75px;
+    margin-bottom: 35px;
+}
+
+.user-container{
+    background-color:rgba(167, 172, 176, .5);
+    padding: 26px;
+    width: 50%;
+    height: 510px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(235, 235, 235);
+    border: 1px solid whitesmoke;
+}
+
+#login-name, #password{
+   padding: 3px;
+   
+}
+
+h1{
+    padding-bottom: 5px;
+}
+
+#password{
+    margin-left: 2px;
+}
+
+#redirect{
+    color: rgb(235, 235, 235) !important;
+    margin-top: 10px;
+}

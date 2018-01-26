@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MedMate</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="shortcut icon" href="images/redcheck.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/med-manager.css" media="screen" title="no title">
+	<link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua:600|Raleway:500" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+
+    <script src="js/med-manager.js" type="text/javascript"></script>
+    <link href='https://clin-table-search.lhc.nlm.nih.gov/autocomplete-lhc-versions/15.1.0/autocomplete-lhc_jQueryUI.min.css' rel="stylesheet">
+    <script src='https://clin-table-search.lhc.nlm.nih.gov/autocomplete-lhc-versions/15.1.0/autocomplete-lhc_jQuery.min.js'></script>
+
+    <div class="jumbotron " id="jumboHead">
+        <div class="container-fluid">
+          <h1 id="headMain">MedMate <img id="logoHead" src="./images/redcheck.png" alt="" height="200" width="200"/></h1> 
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <span class="navbar-brand" id="navLogo"><img id="mmLogo" src="./images/mmlogo.png" alt="" height="200" width="200"/></span>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav" id="navbar">
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="todayBtn">Today's Meds</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" id="newMedBtn">Add a New Med</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="medListBtn">My Med List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="dashBtn">My Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout" id="logout">Log Out</a>
+          </li>
+        </ul>
+          <div class="ml-auto" id="search">
+            <div class="input-group mb-3" id="pharmSearch">
+              <input type="text" class="form-control" placeholder="Enter City or Zip" id="location">
+              <div class="input-group-append">
+                <button class="btn btn-secondary" id="pharmBtn" type="submit">Find Pharmacy</button>
+              </div>
+            </div>
+          </div>
+      </div>  
+    </nav>
+
+    <div class="container-fluid main-content">
+      <div class="row">
+        <div class="col-lg-1 side-panel" id="sideLeft"></div>
+          <div class="col-lg-10 main-panel">
+          <!-- Main Display Goes HERE -->
+            <div class ="col-lg-7 container" id="form-container">
+              <h1 id="pageTitle">Add a New Medication</h1>
+              <form id="med-manager">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input placeholder="Name of Medication" type="text" class="form-control" id="name">
+                  <span id="nameInputValidation" style="display:none;" class="validation-span"></span>
+                  <br />
+                  <label for="dose">Dose:</label>
+                  <input placeholder="Dosage" type="text" class="form-control" id="dose">
+                  <span id="doseInputValidation" style="display:none;" class="validation-span"></span>
+                  <br />
+                  <label for="frequency">Select Frequency: </label>
+                  <br />
+                  <select type="select" class="form-control" id="frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                  </select>
+                  <span id="frequencyInput" style="display:none;" class="validation-span"></span>
+                  <br />
+                  <label for="times">Times (number): </label>
+                  <input placeholder="Times" type="text" class="form-control" id="times">
+                  <span id="timesInputValidation" style="display:none;" class="validation-span"></span>
+                  <br />
+                  <label for="start">Start Date:</label>
+                  <input placeholder="Choose a date" type="date" class="form-control" id="start">
+                  <span id="startInputValidation" style="display:none;" class="validation-span"></span>
+                  <br />
+                  <label for="instructions">Instructions (optional):</label>
+                  <input placeholder="Instructions" type="text" class="form-control" id="instructions">
+                  <br />
+                  <label for="count">Count:</label>
+                  <input placeholder="Count" type="text" class="form-control" id="count">
+                  <span id="countInputValidation" style="display:none;" class="validation-span"></span>
+                  <br />
+                  <!--
+                  <div class="form-group">
+                    <label for="category">Select User:</label>
+                    <select class="form-control" id="user">
+                    </select>
+                  </div>
+                  <br />
+                  -->
+                  <button type="submit" class="btn btn-success submit" href="/med-list?">Submit</button>
+                </div>
+              </form>
+            </div>
+          <!-- END Main Display -->
+          </div>
+        <div class="col-lg-1 side-panel" id="sideRight"></div>
+      </div>
+    </div>      
+
+</body>
+
+</html>
